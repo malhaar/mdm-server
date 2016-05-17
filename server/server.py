@@ -46,11 +46,11 @@ from M2Crypto import SMIME, X509, BIO
 LOGFILE = 'xactn.log'
 
 # Dummy socket to get the hostname
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(('8.8.8.8', 0))
+#s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+#s.connect(('8.8.8.8', 0))
 
 # NOTE: Will need to overwrite this if behind a firewall
-MY_ADDR = s.getsockname()[0] + ":8080"
+MY_ADDR = "http://10.20.102.65" + ":8080"
 
 # Set up some smime objects to verify signed messages coming from devices
 sm_obj = SMIME.SMIME()
@@ -651,6 +651,7 @@ if __name__ == "__main__":
         app.run()
     except:
         sys.exit(0)
+        
 else:
     # app.run() seems to use server.py as a module
     # Placing these in main causes them not to run
