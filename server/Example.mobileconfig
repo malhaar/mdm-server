@@ -24,7 +24,7 @@
 			<key>allowAppInstallation</key>
 			<true/>
 			<key>allowCamera</key>
-			<true/>
+			<false/>
 			<key>allowExplicitContent</key>
 			<true/>
 			<key>allowGlobalBackgroundFetchWhenRoaming</key>
